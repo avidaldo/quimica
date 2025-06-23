@@ -18,7 +18,7 @@ Cabe destacar que la inteligencia artificial (IA) empieza a desempeñar un papel
 
 **Ejemplo práctico:** Imaginemos una planta de tratamiento de agua en la industria química que debe mantener el pH del efluente dentro de un rango seguro (digamos 7.0 ± 0.5) para cumplir la normativa ambiental. Se instala un sensor de pH en la salida del efluente que envía datos cada 5 minutos a un sistema informático. Este sistema genera automáticamente un gráfico de control del pH con LC = 7.0 y límites calculados según la variación histórica permitida. Durante días normales, los puntos fluctúan aleatoriamente alrededor de 7.0 dentro de los límites. Un día, el gráfico muestra varios puntos ascendiendo hacia el LCS y finalmente excediéndolo. La alarma del sistema se activa indicando una posible desviación. Los técnicos revisan y encuentran que la bomba dosificadora de neutralizante estaba fallando. Gracias al gráfico de control digital y la alerta temprana, se **corrige la situación a tiempo**, evitando descargar agua fuera de norma. Este ejemplo ilustra cómo la combinación de sensores, software y análisis estadístico asegura la calidad y conformidad ambiental en un proceso químico de forma didáctica y clara.
 
-![Gráfico de Control de la Densidad](grafico_control_basico.png)
+![Gráfico de Control de la Densidad](imagenes/grafico_control_basico.png)
 
 *Figura 1: Gráfico de control de la densidad de un producto químico simulado, mostrando la línea central del proceso (verde), límites de control (líneas rojas punteadas) y límites de especificación del producto (líneas púrpura punteadas). En la parte inicial (izquierda) el proceso está estable y centrado: las mediciones de densidad oscilan alrededor de ~1.00 g/cc dentro de los límites de control, cumpliendo además la especificación (entre 0.98 y 1.02 g/cc). Hacia la muestra 21 en adelante, se observa una deriva al alza: varios puntos superan el límite de control superior e incluso salen fuera de la especificación, indicando que el proceso perdió estabilidad y produjo resultados no conformes.*
 
@@ -45,11 +45,11 @@ La integración de IA también está encontrando cabida: con suficientes datos h
 
 **Ejemplo práctico:** Supongamos que en una empresa química se formula un adhesivo industrial y se quiere determinar su estabilidad. Se preparan muestras del adhesivo y se almacenan en tres condiciones: a 5 °C (frío), 25 °C (ambiente) y 40 °C (calor acelerado). Cada mes, el laboratorio mide la **fuerza de adhesión** y la **viscosidad** de las muestras. Los datos recopilados muestran que a 40 °C la viscosidad del adhesivo aumenta rápidamente (indicando que el adhesivo se está espesando y podría volverse inutilizable en pocos meses), mientras que a 25 °C los cambios son lentos y a 5 °C prácticamente nulos en el mismo periodo. Usando un software de análisis, los técnicos trazan la **gráfica de vida útil** del adhesivo: determinan que a 25 °C la fuerza de adhesión comienza a caer por debajo del mínimo aceptable después de 18 meses. Con esta evidencia, la empresa etiqueta el producto con una caducidad de 18 meses almacenado a temperatura ambiente, y recomienda refrigeración para prolongar su vida si es necesario. Todo este proceso, apoyado en datos y gráficos, asegura que los clientes reciban un adhesivo que funcionará correctamente dentro de su vida útil declarada. Además, si la empresa cuenta con un sistema digital, podría configurar **alertas** para repetir el estudio en cuanto haya cambios en la formulación, y emplear sensores conectados para verificar que los lotes en almacén se mantienen en las condiciones recomendadas (por ejemplo, que los refrigeradores de almacén están a la temperatura correcta). Así, los estudios de estabilidad se integran con la **gestión de datos en tiempo real** para una garantía de calidad robusta.
 
-![Estudio de Estabilidad del Adhesivo](estudio_estabilidad.png)
+![Estudio de Estabilidad del Adhesivo](imagenes/estudio_estabilidad.png)
 
 *Figura 2: Estudio de estabilidad de un adhesivo industrial bajo diferentes condiciones de temperatura. El gráfico superior muestra la evolución de la fuerza de adhesión (%) durante 24 meses, mientras que el inferior presenta la evolución de la viscosidad (mPa·s). Se observa claramente cómo las altas temperaturas (40°C, línea roja) aceleran la degradación tanto de la fuerza adhesiva como el aumento de viscosidad, mientras que la refrigeración (5°C, línea azul) preserva significativamente mejor las propiedades del producto. Las líneas punteadas rojas indican los límites de especificación para cada propiedad.*
 
-![Tabla Resumen de Estabilidad](tabla_estabilidad.png)
+![Tabla Resumen de Estabilidad](imagenes/tabla_estabilidad.png)
 
 *Figura 3: Resumen de los resultados del estudio de estabilidad del adhesivo industrial, mostrando las propiedades finales después de 24 meses y la vida útil estimada para cada condición de almacenamiento. Esta información es crucial para establecer las condiciones de almacenamiento recomendadas y la fecha de caducidad del producto.*
 
@@ -79,11 +79,11 @@ A continuación, se enumeran algunas **herramientas y métodos digitales** asoci
 
 **Ejemplo práctico:** Consideremos una planta de productos químicos que fabrica **ácido sulfúrico** de grado industrial. La especificación del producto final indica que debe tener una concentración de 98–99% H₂SO₄, con impurezas de hierro menores a 10 ppm. Cada lote producido es analizado en el laboratorio de planta. Un lote arroja 97% de H₂SO₄ (por debajo del mínimo) y 15 ppm de impurezas. Automáticamente, el técnico registra estos resultados en el sistema informático de calidad y éste bloquea el lote marcándolo como **No Conforme**. El software genera un aviso al jefe de calidad y produce un número de incidencia de no conformidad. Un equipo investiga y descubre que hubo un error en la etapa final de concentración debido a una temperatura de operación más baja de lo requerido. Paralelamente, el sistema ERP impide que el lote sea enviado o mezclado con otros. Tras el análisis, se decide reprocesar el lote para elevar su concentración. Una vez reprocesado, se vuelven a cargar los resultados en el sistema: ahora sí 98.5% H₂SO₄ y <10 ppm Fe, con lo cual el lote pasa a estado **Conforme** y es liberado para su uso comercial. Todo el historial de este incidente queda en la base de datos, y se documenta una acción correctiva: recalibrar el sensor de temperatura y capacitar al operario sobre la importancia de ese parámetro. Este ejemplo muestra cómo la digitalización asegura que ninguna partida fuera de especificación llegue al cliente, a la vez que proporciona un mecanismo estructurado para aprender de los errores.
 
-![Análisis de Conformidad - pH](conformidad_histograma.png)
+![Análisis de Conformidad - pH](imagenes/conformidad_histograma.png)
 
 *Figura 4: Análisis de conformidad para el pH de una solución química bajo tres escenarios diferentes. El gráfico superior muestra un proceso centrado y capaz (99.5% conformidad), el medio un proceso descentrado (90.0% conformidad), y el inferior un proceso con alta variabilidad (85.5% conformidad). Las barras rojas en los histogramas indican mediciones fuera de especificación (pH < 6.8 o pH > 7.2). La zona verde sombreada representa el área de conformidad, mientras que las líneas verticales muestran los límites de especificación (rojas) y el valor objetivo (verde).*
 
-![Comparación de Conformidad](comparacion_conformidad.png)
+![Comparación de Conformidad](imagenes/comparacion_conformidad.png)
 
 *Figura 5: Comparación de las tasas de conformidad entre los tres tipos de proceso. Se observa claramente que el proceso centrado y capaz logra prácticamente 100% de conformidad, mientras que los procesos descentrado y variable presentan porcentajes significativos de no conformidad. La línea punteada naranja indica el objetivo típico del 95% de conformidad.*
 
@@ -190,15 +190,15 @@ Por ejemplo, retomemos el caso del pH mencionado antes: supongamos que en un pro
 
 En resumen, la **capacidad de proceso** conecta la variabilidad estadística interna con los requisitos externos de calidad. Es un puente entre el lenguaje del estadístico (desviación estándar, control estadístico) y el lenguaje del gestor de calidad (¿estamos cumpliendo los requisitos del cliente? ¿Cuál es el riesgo de producir fuera de tolerancia?). La digitalización facilita enormemente el cálculo y seguimiento de estos índices: sistemas modernos pueden calcular Cp, Cpk en tiempo real o por lote y mostrarlos en tableros de control para la planta, alertando si caen por debajo de cierto umbral.
 
-![Análisis de Capacidad de Proceso](capacidad_proceso.png)
+![Análisis de Capacidad de Proceso](imagenes/capacidad_proceso.png)
 
 *Figura 6: Análisis de capacidad de proceso mostrando cuatro escenarios diferentes. Arriba izquierda: proceso incapaz (Cp < 1.0) con alta variabilidad que resulta en productos fuera de especificación. Arriba derecha: proceso justo (Cp ≈ 1.0) que apenas cumple con las especificaciones. Abajo izquierda: proceso capaz (Cp > 1.33) con excelente conformidad. Abajo derecha: proceso descentrado donde Cp ≠ Cpk debido a que la media no coincide con el centro de la especificación. Los histogramas muestran la distribución de datos con barras rojas indicando valores fuera de especificación.*
 
-![Interpretación de Índices Cpk](interpretacion_cpk.png)
+![Interpretación de Índices Cpk](imagenes/interpretacion_cpk.png)
 
 *Figura 7: Relación entre el índice Cpk y la tasa de defectos expresada en partes por millón (PPM). Se observa que valores bajos de Cpk (< 1.0) resultan en tasas de defectos muy altas, mientras que valores altos (> 1.67) corresponden a procesos de clase mundial con tasas de defectos menores a 1 PPM. Las líneas horizontales muestran objetivos típicos de 1000 PPM y 100 PPM.*
 
-![Criterios de Capacidad](tabla_capacidad.png)
+![Criterios de Capacidad](imagenes/tabla_capacidad.png)
 
 *Figura 8: Tabla de criterios para interpretar los índices de capacidad de proceso. Cada nivel de Cpk está asociado con un nivel de capacidad específico, una tasa esperada de defectos y recomendaciones de acción. Los colores van de rojo (inadecuado) a verde (excelente) para facilitar la interpretación visual.*
 
@@ -220,7 +220,7 @@ Con la **Industria 4.0** y la transformación digital, las técnicas tradicional
 
 En resumen, la digitalización integra todas las piezas: sensores que recogen datos de la **realidad física**, sistemas de control que los procesan en **tiempo real**, plataformas de análisis que aplican **estadística** e **inteligencia artificial** para extraer información útil, y finalmente personas (operarios, ingenieros, docentes y estudiantes en formación) que interpretan estos análisis para **tomar decisiones informadas**. Esto no solo mejora la calidad del producto químico y la eficiencia del proceso, sino que también crea un entorno más **didáctico** donde la teoría estadística cobra vida en herramientas interactivas. Por ejemplo, un profesor de química puede mostrar a sus alumnos datos reales de un reactor y cómo el software traza un gráfico de control, haciendo mucho más tangible el concepto de variabilidad y control de calidad.
 
-![Dashboard Digital de Control de Calidad](dashboard_simple.png)
+![Dashboard Digital de Control de Calidad](imagenes/dashboard_simple.png)
 
 *Figura 9: Ejemplo de dashboard digital para control de calidad industrial que integra múltiples elementos: gráfico de control en tiempo real (superior izquierda), indicadores clave de rendimiento o KPIs (superior derecha), estado de equipos críticos (inferior izquierda) y métricas de producción por turno (inferior derecha). Este tipo de interfaz permite a los operadores y supervisores tener una visión completa del estado de la planta y tomar decisiones informadas basadas en datos en tiempo real.*
 
